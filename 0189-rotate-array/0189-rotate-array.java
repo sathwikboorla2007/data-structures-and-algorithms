@@ -1,9 +1,9 @@
 class Solution {
     void rotate(int[] nums,int low,int k,int high){
         
-        reverse(nums,low,high-1);
+        reverse(nums,low,high);
         reverse(nums,low,k-1);
-        reverse(nums,k,high-1);
+        reverse(nums,k,high);
 
     }
     void reverse(int []nums,int low,int high){
@@ -23,8 +23,10 @@ class Solution {
         
         int low=0;
         int high=nums.length;
+        if( high<=0 || k<=0)return;
         k=k%high;
-        if(high<=1)return;
+        high=high-1;
+        
         rotate(nums,low,k,high);
     }
 }
