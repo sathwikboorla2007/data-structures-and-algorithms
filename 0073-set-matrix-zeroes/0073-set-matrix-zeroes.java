@@ -7,10 +7,12 @@ class Solution {
         for(int i=0;i<row;i++){
             if(matrix[i][0]==0)
                 firstcolzero=true;
+                
         }
         for(int j=0;j<col;j++){
             if(matrix[0][j]==0){
                 firstrowzero=true;
+                
             }
         }
         for(int i=1;i<row;i++){
